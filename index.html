@@ -8,43 +8,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container">
-        <div class="card border-primary mb-3" style="max-width: 36rem;">
-            <div class="card-header">Administracion de Alumnos</div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col col-md-2">CODIGO</div>
-                    <div class="col col-md-2">
-                        <input class="form-control" type="text" name="txtCodigoAlumno" id="txtCodigoAlumno">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-md-2">NOMBRE</div>
-                    <div class="col col-md-4">
-                        <input class="form-control" type="text" name="txtNombreAlumno" id="txtNombreAlumno">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-md-2">DIRECCION</div>
-                    <div class="col col-md-5">
-                        <input class="form-control" type="text" name="txtDireccionAlumno" id="txtDireccionAlumno">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-md-2">TEL</div>
-                    <div class="col col-md-2">
-                        <input class="form-control" type="text" name="txtTelefonoAlumno" id="txtTelefonoAlumno">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col col-md-6">
-                        <input id="btnGuardarAlumno" type="submit" value="Guardar" class="btn btn-primary">
-                        <input id="btnNuevoAlumno" type="reset" value="Nuevo" class="btn btn-warning" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Mensaje de error -->
+<span name="errorMsg"></span>
+
+<!-- Cargar Frame de TV y cargar el video de la webcam -->
+<div id="video_wrap">
+    <div id="video_overlays">
+        <video id="video_frame" playsinline autoplay></video>
+    </div> 
+    
+</div>
+
+<!-- Capturamos la imagen a través de la API web y lo mostramos en el canvas -->
+<div class="button_controller">
+    <!-- Botón para capturar -->
+    <button id="snap_frame">Capturar Imagen</button>
+    <br/><br/>
+    <!-- Imagen de la Webcam -->
+    <canvas id="canvas_frame"></canvas>
+</div>
+
+<!-- Cargamos el Javascript -->
+<script src="/webcam.js" async></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
